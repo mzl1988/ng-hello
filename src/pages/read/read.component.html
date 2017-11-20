@@ -1,0 +1,13 @@
+<div class="side-widgets">
+    <ul class="list-unstyled">
+        <li class="media" *ngFor="let media of medias" (click)="selected(media)">
+            <img class="mr-3" [src]="media.pic">
+            <div class="media-body">
+                <span class="mt-0 mb-1">{{ media.name }}</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="data-widgets">
+    <h4 class="page-title b-0">{{ media.name }}</h4>
+</div>

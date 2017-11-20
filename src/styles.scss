@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+/*-----------------------------------------------------------
+    bootstrap
+----------------------------------------------------------*/
+@import '~bootstrap/scss/bootstrap';
+/*-----------------------------------------------------------
+    bootstrap
+----------------------------------------------------------*/
+@import "assets/scss/template-skins";
+
+html, body {
+    height: 100%;
+    color: #fff;
+}
+
+::selection {
+    background: rgba(255,255,255,0.1);
+}
+
+a:hover, a:focus {
+    color: #FFD600;
+    text-decoration: none;
+}
+
+a.underline {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.35);
+}
+
+a.underline:hover, a.underline:focus {
+    border-color: #FFD600;
+}

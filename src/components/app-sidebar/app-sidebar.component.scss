@@ -1,0 +1,72 @@
+#sidebar {
+    float: left;
+    position: relative;
+    height: calc(100% - 50px);
+    width: 45px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.side-menu {
+    width: 45px;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+}
+
+.side-menu>li {
+    list-style: none;
+}
+
+.side-menu>li>a {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    font-size: 12px;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    opacity: 0.55;
+    cursor: pointer;
+    i {
+        font-size: 1.3rem;
+    }
+    span.menu-item {
+        color: rgba(255, 213, 0, 0.8);
+    }
+}
+
+.side-menu .menu-item {
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9;
+    width: 188px;
+    display: block;
+    line-height: normal;
+    text-align: left;
+    -webkit-backface-visibility: hidden;
+}
+
+.side-menu span.menu-item {
+    top: 0;
+    padding: 13px 15px 13px 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.side-menu .menu-item {
+    position: absolute;
+    left: 70px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: left 230ms;
+    -moz-transition: all 230ms;
+    -o-transition: all 230ms;
+}
+
+.side-menu>li:hover .menu-item {
+    left: 45px;
+    opacity: 1;
+    z-index: 20;
+    visibility: visible;
+}
