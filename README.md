@@ -39,7 +39,6 @@ angular-cli会在项目根目录下生成一个dist目录，里面就是编译�
 * checkbox https://lokesh-coder.github.io/pretty-checkbox/
 * bootstrap https://getbootstrap.com/docs/4.0/components/buttons/
 * ng2-toastr https://github.com/PointInside/ng2-toastr
-* ngx-perfect-scrollbar https://github.com/zefoy/ngx-perfect-scrollbar
 * bootstrap-datepicker https://github.com/uxsolutions/bootstrap-datepicker
 * bootstrap-daterangepicker http://www.daterangepicker.com/
 * ng-select https://basvandenberg.github.io/ng-select

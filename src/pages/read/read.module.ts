@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Http } from '@angular/http';
+import { Http, JsonpModule } from '@angular/http';
 import { readRoutes } from './read.routes';
 import { ReadComponent } from './read.component';
 import { HttpInterceptorService } from '../../providers/HttpInterceptorService';
@@ -9,6 +9,7 @@ import { HttpInterceptorService } from '../../providers/HttpInterceptorService';
 @NgModule({
     imports: [
         CommonModule,
+        JsonpModule,
         RouterModule.forChild(readRoutes)
     ],
     exports: [],

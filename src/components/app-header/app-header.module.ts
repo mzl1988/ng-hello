@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppHeaderComponent } from './app-header.component';
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        ModalModule.forRoot()
     ],
     exports: [
         AppHeaderComponent

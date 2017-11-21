@@ -9,5 +9,49 @@
     </ul>
 </div>
 <div class="data-widgets">
-    <h4 class="page-title b-0">{{ media.name }}</h4>
+    <h4 class="page-title border-0">{{ media.name }}</h4>
+    <div class="list-container">
+        <div class="listview-header">
+            <div class="pretty p-default p-fill pull-left">
+                <input type="checkbox" />
+                <div class="state">
+                    <label></label>
+                </div>
+            </div>
+            <ul class="list-icon">
+                <li>
+                    <i class="icon ion-ios-heart-outline"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="listview-body">
+            <div class="media" *ngFor="let article of articles">
+                <div class="pretty p-default p-fill align-self-center">
+                    <input type="checkbox" />
+                    <div class="state">
+                        <label></label>
+                    </div>
+                </div>
+                <img *ngIf="article.imgSrc.length" class="align-self-center mr-3" [src]="article.imgSrc[0]">
+                <div class="media-body">
+                    <h5 class="mt-0"> {{ article.title }} </h5>
+                    <div class="attrs align-self-center">
+                        {{ article.readAmount }} 阅读
+                    </div>
+                    <div class="attrs">
+                        {{ article.commentAmount }} 评论
+                    </div>
+                    <div class="attrs">
+                        {{ article.updatedAt }}
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="hasMore && !loading" class="media justify-content-center align-self-center" style="height: 60px">
+                <a (click)="getArticleList()" ><small>加载更多</small></a>
+            </div>
+            <div class="loader-box" *ngIf="loading">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
 </div>

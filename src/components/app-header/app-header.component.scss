@@ -69,3 +69,19 @@
     font-size: 1.3rem;
     margin-right: 4px;
 }
+
+.template-skins a {
+    cursor: pointer;
+}
+
+.template-skins [class*="col-"] img {
+    border: 3px solid rgba(0,0,0,0.5);
+}
+
+.template-skins [class*="col-"] img:hover {
+    opacity: 0.8;
+}
+
+.template-skins [class*="col-"] {
+    margin-bottom: 10px;    
+}

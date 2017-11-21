@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { CookieModule } from 'ngx-cookie';
 
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
@@ -16,6 +16,7 @@ import { PagesModule } from '../pages/pages.module';
         BrowserModule,
         RouterModule,
         PagesModule,
+        CookieModule.forRoot(),
         RouterModule.forRoot(appRoutes)
     ],
     providers: [],

@@ -1,23 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 /*-----------------------------------------------------------
     bootstrap
 ----------------------------------------------------------*/
+
 @import '~bootstrap/scss/bootstrap';
+
 /*-----------------------------------------------------------
     bootstrap
 ----------------------------------------------------------*/
+
 @import "assets/scss/template-skins";
 
-html, body {
+/*-----------------------------------------------------------
+    pretty-checkbox
+----------------------------------------------------------*/
+
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+
+/*-----------------------------------------------------------
+    loader
+----------------------------------------------------------*/
+
+@import 'assets/scss/loader';
+/*-----------------------------------------------------------
+    bootstrap
+----------------------------------------------------------*/
+
+@import 'assets/scss/bootstrap';
+
+/* my style files */
+
+html,
+body {
     height: 100%;
     color: #fff;
 }
 
-::selection {
-    background: rgba(255,255,255,0.1);
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+ ::-webkit-scrollbar-thumb {
+    background: rgba(193, 193, 193, 0.6);
+    cursor: pointer;
+    border-radius: 2.5px;
+}
+ ::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0.2);
 }
 
-a:hover, a:focus {
+::selection {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    border-radius: 0 !important;
+    box-shadow: none;
+    -ms-touch-action: manipulation; 
+    touch-action: manipulation;    
+}
+
+*:focus, *:active {
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+a:hover,
+a:focus {
     color: #FFD600;
     text-decoration: none;
 }
@@ -26,6 +80,17 @@ a.underline {
     border-bottom: 1px dotted rgba(255, 255, 255, 0.35);
 }
 
-a.underline:hover, a.underline:focus {
+a.underline:hover,
+a.underline:focus {
     border-color: #FFD600;
+}
+
+.loader-box {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    .loader {
+        @include loader($size: 15px, $color: #000, $duration: 1s, $gap: 2px, $align: middle);
+    }
 }
