@@ -30,7 +30,7 @@ export class AppHeaderComponent implements OnInit {
     }
 
     openModal(template: TemplateRef<any>) {
-        this.skinModalRef = this.modalService.show(template);
+        this.skinModalRef = this.modalService.show(template, { class: 'modal-lg'});
     }
 
     setSkin(skin) {

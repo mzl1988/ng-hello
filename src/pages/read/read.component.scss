@@ -89,8 +89,7 @@
         &:hover {
             background-color: rgba(0, 0, 0, 0.07);
         }
-
-        &:hover h5{
+        &:hover h5 {
             color: #FFD600;
         }
         img {
@@ -113,6 +112,103 @@
             width: auto;
             background: rgba(0, 0, 0, 0.2);
         }
-        
+    }
+}
+
+.read-modal {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.25);
+    margin-left: 100vw;
+    .read-modal-body {
+        position: absolute;
+        width: 720px;
+        height: 100%;
+        left: 50%;
+        margin-left: -360px;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: #333;
+        .modal-header {
+            border-bottom: 1px solid #ddd;
+            .close {
+                color: #333;
+            }
+        }
+        .modal-body {
+            width: 100%;
+            padding: 0;
+            height: calc(100% - 38px);
+            overflow-x: hidden;
+            overflow-y: auto;
+            .content_wrapper {
+                padding: 0 17px 10px;
+            }
+            .landingHead {
+                padding: .13rem 0;
+            }
+            .landingHead h1 {
+                color: #000;
+                line-height: 1.4;
+                font-weight: 400;
+                font-size: 24px;
+                margin-top: 1rem;
+            }
+            .landingHead section {
+                display: flex;
+                box-align: center;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0;
+            }
+            .landingHead section h3 {
+                margin-top: 10px;
+                box-orient: horizontal;
+                flex: 1;
+                display: flex;
+                box-align: center;
+                align-items: center;
+            }
+            .landingHead .avatarLink {
+                position: relative;
+                margin: 0 14px 0 0;
+            }
+            .landingHead .avatarLink img {
+                display: block;
+                height: 35px;
+                width: 35px;
+                border-radius: 35px;
+            }
+            .landingHead .extraInfo {
+                font-size: .16rem;
+            }
+            .landingHead .authorName {
+                color: #333;
+                font-size: 1rem;
+                user-select: none;
+                display: block;
+                padding: 0 0 .02rem;
+                text-decoration: none;
+            }
+            .landingHead .infoSet .afrSplit {
+                position: relative;
+                padding-right: 8px;
+            }
+            .landingHead .infoSet {
+                display: block;
+                height: 100%;
+                color: #999;
+                font-weight: 400;
+                font-size: 1rem;
+            }
+            p {
+                color: rgb(62, 62, 62);
+                font-size: 16px;
+                line-height: 1.6;
+            }
+        }
     }
 }

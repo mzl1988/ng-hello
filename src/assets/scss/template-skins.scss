@@ -1,93 +1,56 @@
-@media (min-width: 1024px) {
-    /* --------------------------------------------------------
+/* --------------------------------------------------------
         Template Blur Skins for Desktop
     -----------------------------------------------------------*/
-    [id^="skin-blur-"] {
-        background-size: 100% 100%;
-        background-attachment: fixed;
-    }
-    #skin-blur-violate {
-        background-image: url(./assets/imgs/body/violate.jpg);
-    }
-    #skin-blur-lights {
-        background-image: url(./assets/imgs/body/lights.jpg);
-    }
-    #skin-blur-city {
-        background-image: url(./assets/imgs/body/city.jpg);
-    }
-    #skin-blur-greenish {
-        background-image: url(./assets/imgs/body/greenish.jpg);
-    }
-    #skin-blur-night {
-        background-image: url(./assets/imgs/body/night.jpg);
-    }
-    #skin-blur-sunny {
-        background-image: url(./assets/imgs/body/sunny.jpg);
-    }
-    #skin-blur-blue {
-        background-image: url(./assets/imgs/body/blue.jpg);
-    }
-    #skin-blur-chrome {
-        background-image: url(./assets/imgs/body/chrome.jpg);
-    }
-    #skin-blur-ocean {
-        background-image: url(./assets/imgs/body/ocean.jpg);
-    }
-    #skin-blur-sunset {
-        background-image: url(./assets/imgs/body/sunset.jpg);
-    }
-    #skin-blur-yellow {
-        background-image: url(./assets/imgs/body/yellow.jpg);
-    }
-    #skin-blur-kiwi {
-        background-image: url(./assets/imgs/body/kiwi.jpg);
-    }
-    #skin-blur-nexus {
-        background-image: url(./assets/imgs/body/nexus.jpg);
-    }
+
+[id^="skin-blur-"] {
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
-@media (max-width: 1024px) {
-    /* --------------------------------------------------------
-        Template Skins for Mobile
-    -----------------------------------------------------------*/
-    #skin-blur-violate {
-        background: #581528;
-    }
-    #skin-blur-lights {
-        background: #152d33;
-    }
-    #skin-blur-city {
-        background: #321e39;
-    }
-    #skin-blur-greenish {
-        background: #233335;
-    }
-    #skin-blur-night {
-        background: #0F3D52;
-    }
-    #skin-blur-sunny {
-        background: #44360B;
-    }
-    #skin-blur-blue {
-        background: #2B6474;
-    }
-    #skin-blur-chrome {
-        background: #40404E;
-    }
-    #skin-blur-ocean {
-        background: #0064B3;
-    }
-    #skin-blur-sunset {
-        background: #883527;
-    }
-    #skin-blur-yellow {
-        background: #915D25;
-    }
-    #skin-blur-kiwi {
-        background: #0f4731;
-    }
-    #skin-blur-nexus {
-        background: #8A033A;
-    }
+#skin-blur-violate {
+    background-image: url(./assets/imgs/body/violate.jpg);
+}
+
+#skin-blur-lights {
+    background-image: url(./assets/imgs/body/lights.jpg);
+}
+
+#skin-blur-city {
+    background-image: url(./assets/imgs/body/city.jpg);
+}
+
+#skin-blur-greenish {
+    background-image: url(./assets/imgs/body/greenish.jpg);
+}
+
+#skin-blur-night {
+    background-image: url(./assets/imgs/body/night.jpg);
+}
+
+#skin-blur-sunny {
+    background-image: url(./assets/imgs/body/sunny.jpg);
+}
+
+#skin-blur-blue {
+    background-image: url(./assets/imgs/body/blue.jpg);
+}
+
+#skin-blur-ocean {
+    background-image: url(./assets/imgs/body/ocean.jpg);
+}
+
+#skin-blur-sunset {
+    background-image: url(./assets/imgs/body/sunset.jpg);
+}
+
+#skin-blur-yellow {
+    background-image: url(./assets/imgs/body/yellow.jpg);
+}
+
+#skin-blur-kiwi {
+    background-image: url(./assets/imgs/body/kiwi.jpg);
+}
+
+#skin-blur-nexus {
+    background-image: url(./assets/imgs/body/nexus.jpg);
 }
