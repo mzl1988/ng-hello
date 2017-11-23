@@ -1,0 +1,117 @@
+.side-widgets {
+    height: 100%;
+    width: 188px;
+    float: left;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    .radio-title {
+        padding: 0 15px;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        text-align: center;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    .radio-info-item {
+        font-size: 11px;
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+        padding: 5px 10px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .profile-pic {
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin: 9px auto 6px auto;
+        border-radius: 100px !important;
+        border: 6px solid rgba(0, 0, 0, 0.2);
+    }
+    .widget {
+        margin-bottom: 25px;
+        .widget-title {
+            background: rgba(0, 0, 0, 0.35);
+            font-size: 11px;
+            display: inline-block;
+            margin: 0;
+            width: 100%;
+            padding: 7px 10px 7px;
+        }
+        .widget-body {
+            padding: 5px 10px 10px;
+            overflow: hidden;
+
+            .attrs {
+                padding: 5px 8px;
+                margin: 4px 5px 2px 0;
+                font-size: 11px;
+                float: left;
+                width: auto;
+                color: rgba(255, 255, 255, 0.8);
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            .desc {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.data-widgets {
+    margin-left: 188px;
+    height: 100%;
+    position: relative;
+}
+
+.page-title {
+    padding: 8px 15px 9px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0;
+}
+
+.list-container {
+    width: 100%;
+    height: calc(100% - 35px);
+}
+
+.listview-header {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 1rem;
+    overflow: hidden;
+    .pagination-info {
+        font-size: 0.8rem;
+        margin-right: 10px;
+    }
+}
+
+.listview-body {
+    width: 100%;
+    height: calc(100% - 51px);
+    position: relative;
+    .media {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        &:last-child {
+            border-bottom: 0;
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.07);
+        }
+        .attrs {
+            padding: 5px 8px;
+            margin: 4px 5px 2px 0;
+            font-size: 11px;
+            float: left;
+            width: auto;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+}

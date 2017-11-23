@@ -20,9 +20,25 @@ export class RadioService {
             });
     }
 
-    getRadioBycategoryId(categoryId, pageSize, pageNum) {
+    getRadioByCategoryId(categoryId, pageSize, pageNum) {
         return this.jsonp
             .get(`${this.apiUrl}/resource/search?cid=${categoryId}&rtype=20000&sorttype=HOT_RANK_DESC&pagesize=${pageSize}&pagenum=${pageNum}&callback=JSONP_CALLBACK`)
+            .map((response: Response) => {
+                return response.json();
+            });
+    }
+
+    getRadioDetail(id): Observable<any> {
+        return this.jsonp
+            .get(`${this.apiUrl}/albumdetail/get?albumid=${id}&format=json&callback=JSONP_CALLBACK`)
+            .map((response: Response) => {
+                return response.json();
+            });
+    }
+
+    getRadioAudioList(id, pageSize, pageNum): Observable<any> {
+        return this.jsonp
+            .get(`${this.apiUrl}/audios/list?id=${id}&pagesize=${pageSize}&pagenum=${pageNum}&pagenum=33&sorttype=1&format=json&callback=JSONP_CALLBACK`)
             .map((response: Response) => {
                 return response.json();
             });

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/finally';
 import * as _ from 'lodash';
 import * as $ from 'jquery';
@@ -6,63 +8,60 @@ import { RadioService } from '../../services';
 import { log } from 'util';
 
 @Component({
-    selector: 'app-radio',
-    templateUrl: './radio.component.html',
-    styleUrls: ['./radio.component.scss'],
+    selector: 'app-radio-profile',
+    templateUrl: './radio-profile.component.html',
+    styleUrls: ['./radio-profile.component.scss'],
     providers: [RadioService]
 })
-export class RadioComponent implements OnInit {
-    category: any[] = [];
-    selCategory: any;
+export class RadioProfileComponent implements OnInit {
+    id: string;
+    radio: any;
     totalItems = 0;
     maxSize = 5;
-    itemsPerPage = 24;
+    itemsPerPage = 20;
     currentPage = 1;
     totalPages = 0;
     loading = false;
     dataList: any[] = [];
 
     constructor(
+        private route: ActivatedRoute,
         private radioService: RadioService
     ) {
-
+        this.route.params.subscribe(params => {
+            this.id = params['id'];
+            this.getRadioDetail();
+            this.getRadioAudioList();
+        });
     }
 
     ngOnInit() {
-        this.getCategoryList();
+
     }
 
-    pageChanged(event: any): void {
-        this.currentPage = event.page;
-        this.getRadioByCategoryId();
-    }
-
-    getCategoryList() {
-        this.radioService.getCategoryList()
+    getRadioDetail() {
+        this.radioService.getRadioDetail(this.id)
             .finally(() => {
             })
             .subscribe(res => {
                 if (res.message === 'success') {
-                    this.category = res.result.dataList;
+                    this.radio = res.result;
                 }
-                this.category.shift();
-                this.selected(this.category[0]);
+                console.log(this.radio);
             },
             error => {
             });
     }
 
-    selected(category) {
-        this.selCategory = category;
-        this.totalItems = 0;
-        this.currentPage = 1;
-        this.getRadioByCategoryId();
+    pageChanged(event: any): void {
+        this.currentPage = event.page;
+        this.getRadioAudioList();
     }
 
-    getRadioByCategoryId() {
+    getRadioAudioList() {
         this.dataList = [];
         this.loading = true;
-        this.radioService.getRadioByCategoryId(this.selCategory.categoryId, this.itemsPerPage, this.currentPage)
+        this.radioService.getRadioAudioList(this.id, this.itemsPerPage, this.currentPage)
             .finally(() => {
                 this.loading = false;
             })
@@ -70,9 +69,10 @@ export class RadioComponent implements OnInit {
                 if (res.message !== 'success') {
                     return;
                 }
-                this.totalItems = res.result.totalCounts;
-                this.totalPages = res.result.totalPages;
+                this.totalItems = res.result.count;
+                this.totalPages = res.result.sumPage;
                 this.dataList = res.result.dataList;
+                console.log(res);
             },
             error => {
             });

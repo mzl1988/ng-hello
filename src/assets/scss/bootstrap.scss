@@ -1,3 +1,12 @@
+/* button */
+
+.btn {
+    border: 0;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
 /* Modal */
 
 .modal {
@@ -108,6 +117,13 @@
     border-color: rgba(255, 255, 255, 0.15);
 }
 
+.page-item.disabled .page-link {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.1);
+    pointer-events: inherit;
+    cursor: no-drop;
+}
+
 
 /* card */
 
@@ -119,24 +135,28 @@
 .card-img-top {
     border-radius: 0;
 }
+
 @media (min-width:576px) {
     .card-img-top {
         display: block;
         height: calc(50vw - 166px);
     }
 }
+
 @media (min-width:768px) {
     .card-img-top {
         display: block;
         height: calc(33.333333vw - 121.33px);
     }
 }
+
 @media (min-width:992px) {
     .card-img-top {
         display: block;
         height: calc(25vw - 99px);
     }
 }
+
 @media (min-width:1200px) {
     .card-img-top {
         display: block;

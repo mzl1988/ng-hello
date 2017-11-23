@@ -1,0 +1,69 @@
+<perfect-scrollbar class="side-widgets">
+    <img class="profile-pic animated" [src]="radio?.pic">
+    <h4 class="radio-title">{{ radio?.name }}</h4>
+    <div class="radio-info-item">
+        上传者：{{ radio?.uploadUserName }}
+    </div>
+    <div class="radio-info-item">
+        更新频率：{{ radio?.updateDay }}
+    </div>
+    <div class="radio-info-item mb-2">
+        订阅：{{ radio?.followedNum }}
+    </div>
+    <div class="widget">
+        <h4 class="widget-title">标签</h4>
+        <div class="widget-body">
+            <div class="attrs" *ngFor="let keyWord of radio?.keyWords">
+                {{ keyWord }}
+            </div>
+        </div>
+    </div>
+    <div class="widget">
+        <h4 class="widget-title">简介</h4>
+        <div class="widget-body">
+            <div class="desc">
+                {{ radio?.radioDesc }}
+            </div>
+        </div>
+    </div>
+</perfect-scrollbar>
+<div class="data-widgets">
+    <h4 class="page-title border-0">{{ radio?.name }}</h4>
+    <div class="list-container">
+        <div class="listview-header">
+            <div class="w-50 float-left">
+                <div class="d-flex justify-content-start align-items-center">
+                    <button type="button" class="btn btn-dark btn-sm">
+                        <i class="fa fa-volume-up"></i> 播放全部
+                    </button>
+                </div>
+            </div>
+            <div class="w-50 float-left">
+                <div class="d-flex justify-content-end align-items-center">
+                    <div class="pagination-info">
+                        第 {{currentPage}} 页，共 {{totalPages}} 页
+                    </div>
+                    <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" [maxSize]="maxSize" [itemsPerPage]="itemsPerPage" class="pagination-sm"
+                        previousText="<i class='fa fa-angle-left'></i>" nextText="<i class='fa fa-angle-right'></i>" [rotate]="false"
+                        (pageChanged)="pageChanged($event)"></pagination>
+                </div>
+            </div>
+        </div>
+        <div class="listview-body">
+            <perfect-scrollbar>
+                <div class="loader-box" *ngIf="loading">
+                    <div class="loader"></div>
+                </div>
+                <div class="media" *ngFor="let item of dataList; let i = index">
+                    <!-- 阻止事件冒泡 $event.stopPropagation() -->
+
+                    <div class="media-body">
+                        <div>
+                            {{ item.audioName }}
+                        </div>
+                    </div>
+                </div>
+            </perfect-scrollbar>
+        </div>
+    </div>
+</div>

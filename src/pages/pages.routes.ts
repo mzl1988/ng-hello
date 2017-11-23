@@ -10,10 +10,11 @@ export const pagesRoutes = [
         path: 'pages',
         component: PagesComponent,
         children: [
-            { path: '', redirectTo: 'read', pathMatch: 'full' },
+            { path: '', redirectTo: 'radio', pathMatch: 'full' },
             { path: 'radio', loadChildren: 'pages/radio/radio.module#RadioModule' },
+            { path: 'radio-profile/:id', loadChildren: 'pages/radio-profile/radio-profile.module#RadioProfileModule' },
             { path: 'read', loadChildren: 'pages/read/read.module#ReadModule' },
-            { path: '**', redirectTo: 'read' }
+            { path: '**', redirectTo: 'radio' }
         ]
     }
 ];
