@@ -4,8 +4,8 @@
     float: left;
     position: relative;
     background: rgba(0, 0, 0, 0.3);
-    overflow-x: hidden;
-    overflow-y: auto;
+    // overflow-x: hidden;
+    // overflow-y: auto;
     .media {
         padding: 10px;
         cursor: pointer;
@@ -50,9 +50,10 @@
 .listview-body {
     width: 100%;
     height: calc(100% - 51px);
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 30px;
+    position: relative;
+    perfect-scrollbar>.ps {
+        height: 100%;
+    }
     .card {
         width: 100%;
         position: relative;

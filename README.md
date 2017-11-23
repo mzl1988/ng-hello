@@ -44,6 +44,7 @@ angular-cli会在项目根目录下生成一个dist目录，里面就是编译�
 * ng-select https://basvandenberg.github.io/ng-select
 * ngx-pipes https://github.com/danrevah/ngx-pipes
 * angular2-fontawesome https://github.com/travelist/angular2-fontawesome
+* ngx-perfect-scrollbar https://github.com/zefoy/ngx-perfect-scrollbar
 
 ## 图标
 1. http://fontawesome.io/icons/ 常用

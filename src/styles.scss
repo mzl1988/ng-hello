@@ -30,6 +30,12 @@
 
 @import 'assets/scss/bootstrap';
 
+/*-----------------------------------------------------------
+    perfect-scrollbar
+----------------------------------------------------------*/
+
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
 /* my style files */
 
 html,
@@ -46,7 +52,7 @@ body {
     height: 5px;
 }
  ::-webkit-scrollbar-thumb {
-    background: #C1C1C1;
+    background: #aaa;
     cursor: pointer;
     border-radius: 2.5px;
 }

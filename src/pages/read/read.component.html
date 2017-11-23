@@ -1,4 +1,4 @@
-<div class="side-widgets">
+<perfect-scrollbar class="side-widgets">
     <ul class="list-unstyled">
         <li class="media" *ngFor="let media of medias" (click)="selected(media)">
             <img class="mr-3" [src]="media.pic">
@@ -7,7 +7,7 @@
             </div>
         </li>
     </ul>
-</div>
+</perfect-scrollbar>
 <div class="data-widgets">
     <h4 class="page-title border-0">{{ media.name }}</h4>
     <div class="list-container">
@@ -27,36 +27,38 @@
             </div>
         </div>
         <div class="listview-body">
-            <div class="media" *ngFor="let article of articles; let i = index" (click)="readArticle(article.id, i)">
-                <!-- 阻止事件冒泡 $event.stopPropagation() -->
-                <div class="pretty p-default p-fill align-self-center" (click)="$event.stopPropagation();">
-                    <input type="checkbox" />
-                    <div class="state">
-                        <label></label>
+            <perfect-scrollbar>
+                <div class="media" *ngFor="let article of articles; let i = index" (click)="readArticle(article.id, i)">
+                    <!-- 阻止事件冒泡 $event.stopPropagation() -->
+                    <div class="pretty p-default p-fill align-self-center" (click)="$event.stopPropagation();">
+                        <input type="checkbox" />
+                        <div class="state">
+                            <label></label>
+                        </div>
+                    </div>
+                    <img *ngIf="article.imgSrc.length" class="align-self-center mr-3" [src]="article.imgSrc[0]">
+                    <div class="media-body">
+                        <h5 class="mt-0"> {{ article.title }} </h5>
+                        <div class="attrs align-self-center">
+                            {{ article.readAmount }} 阅读
+                        </div>
+                        <div class="attrs">
+                            {{ article.commentAmount }} 评论
+                        </div>
+                        <div class="attrs">
+                            {{ article.updatedAt }}
+                        </div>
                     </div>
                 </div>
-                <img *ngIf="article.imgSrc.length" class="align-self-center mr-3" [src]="article.imgSrc[0]">
-                <div class="media-body">
-                    <h5 class="mt-0"> {{ article.title }} </h5>
-                    <div class="attrs align-self-center">
-                        {{ article.readAmount }} 阅读
-                    </div>
-                    <div class="attrs">
-                        {{ article.commentAmount }} 评论
-                    </div>
-                    <div class="attrs">
-                        {{ article.updatedAt }}
-                    </div>
+                <div *ngIf="hasMore && !loading" class="media justify-content-center align-self-center p-0" style="height: 60px">
+                    <a (click)="getArticleList()" style="width: 100%; height: 60px;line-height: 60px;text-align: center;">
+                        <small>加载更多</small>
+                    </a>
                 </div>
-            </div>
-            <div *ngIf="hasMore && !loading" class="media justify-content-center align-self-center p-0" style="height: 60px">
-                <a (click)="getArticleList()" style="width: 100%; height: 60px;line-height: 60px;text-align: center;">
-                    <small>加载更多</small>
-                </a>
-            </div>
-            <div class="loader-box" *ngIf="loading">
-                <div class="loader"></div>
-            </div>
+                <div class="loader-box" *ngIf="loading">
+                    <div class="loader"></div>
+                </div>
+            </perfect-scrollbar>
         </div>
     </div>
 </div>

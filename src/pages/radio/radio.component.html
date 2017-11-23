@@ -1,4 +1,4 @@
-<div class="side-widgets">
+<perfect-scrollbar class="side-widgets">
     <ul class="list-unstyled">
         <li class="media" *ngFor="let val of category" (click)="selected(val)">
             <div class="media-body">
@@ -6,7 +6,7 @@
             </div>
         </li>
     </ul>
-</div>
+</perfect-scrollbar>
 <div class="data-widgets">
     <h4 class="page-title border-0">{{ selCategory?.categoryName }}</h4>
     <div class="list-container">
@@ -20,22 +20,25 @@
             </div>
         </div>
         <div class="listview-body">
-            <div class="loader-box" *ngIf="loading">
-                <div class="loader"></div>
-            </div>
-            <div class="row">
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" *ngFor="let item of dataList">
-                    <div class="card">
-                        <img class="card-img-top" [src]="item.pic" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title" [tooltip]="item.name">{{ item.name }}</h4>
-                            <p class="card-text" [tooltip]="item.desc">{{ item.desc }}</p>
+            <perfect-scrollbar>
+                <div style="padding: 30px;">
+                    <div class="loader-box" *ngIf="loading">
+                        <div class="loader"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" *ngFor="let item of dataList">
+                            <div class="card">
+                                <img class="card-img-top" [src]="item.pic" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title" [tooltip]="item.name">{{ item.name }}</h4>
+                                    <p class="card-text" [tooltip]="item.desc">{{ item.desc }}</p>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-
-            </div>
+            </perfect-scrollbar>
         </div>
-
     </div>
 </div>
