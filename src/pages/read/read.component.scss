@@ -4,6 +4,8 @@
     float: left;
     position: relative;
     background: rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    overflow-y: auto;
     .media {
         padding: 10px;
         cursor: pointer;
@@ -42,8 +44,6 @@
 }
 
 .listview-header {
-    display: flex;
-    align-items: center;
     background: rgba(0, 0, 0, 0.2);
     padding: 6px 1rem;
     .pretty .state label:before,

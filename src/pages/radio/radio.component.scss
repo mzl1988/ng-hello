@@ -1,0 +1,82 @@
+.side-widgets {
+    height: 100%;
+    width: 188px;
+    float: left;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    overflow-y: auto;
+    .media {
+        padding: 10px;
+        cursor: pointer;
+        .media-body {
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.data-widgets {
+    margin-left: 188px;
+    height: 100%;
+    position: relative;
+}
+
+.page-title {
+    padding: 8px 15px 9px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0;
+}
+
+.list-container {
+    width: 100%;
+    height: calc(100% - 35px);
+}
+
+.listview-header {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 1rem;
+
+    .pagination-info {
+        font-size: 0.8rem;
+        margin-right: 10px;
+    }
+}
+
+.listview-body {
+    width: 100%;
+    height: calc(100% - 51px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 30px;
+    .card {
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+        cursor: pointer;
+        &:hover .card-img-top{
+            opacity: 0.8;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            white-space: normal;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+        }
+        .card-text {
+            height: 75px;
+            font-size: 0.8rem;
+            white-space: normal;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+        }
+    }
+}

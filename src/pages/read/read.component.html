@@ -12,17 +12,19 @@
     <h4 class="page-title border-0">{{ media.name }}</h4>
     <div class="list-container">
         <div class="listview-header">
-            <div class="pretty p-default p-fill pull-left">
-                <input type="checkbox" />
-                <div class="state">
-                    <label></label>
+            <div class="d-flex justify-content-start align-items-center">
+                <div class="pretty p-default p-fill">
+                    <input type="checkbox" />
+                    <div class="state">
+                        <label></label>
+                    </div>
                 </div>
+                <ul class="list-icon">
+                    <li tooltip="收藏">
+                        <i class="icon ion-ios-heart-outline"></i>
+                    </li>
+                </ul>
             </div>
-            <ul class="list-icon">
-                <li>
-                    <i class="icon ion-ios-heart-outline"></i>
-                </li>
-            </ul>
         </div>
         <div class="listview-body">
             <div class="media" *ngFor="let article of articles; let i = index" (click)="readArticle(article.id, i)">

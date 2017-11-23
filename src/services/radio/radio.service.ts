@@ -6,17 +6,25 @@ import { Http, Response, Jsonp } from '@angular/http';
 
 @Injectable()
 export class RadioService {
-    apiUrl = 'https://author.baidu.com';
+    apiUrl = 'http://www.tingban.cn/webapi';
 
     constructor(
         private jsonp: Jsonp
     ) { }
 
-    getArticleList(appId, pageNumber) {
+    getCategoryList() {
         return this.jsonp
-        .get(`${this.apiUrl}/list?type=article&context={"offset":"-1_${(pageNumber - 1) * 20}","app_id":"${appId}"}&callback=JSONP_CALLBACK`)
-        .map((response: Response) => {
-            return response.json();
-        });
+            .get(`${this.apiUrl}/category/list?callback=JSONP_CALLBACK`)
+            .map((response: Response) => {
+                return response.json();
+            });
+    }
+
+    getRadioBycategoryId(categoryId, pageSize, pageNum) {
+        return this.jsonp
+            .get(`${this.apiUrl}/resource/search?cid=${categoryId}&rtype=20000&sorttype=HOT_RANK_DESC&pagesize=${pageSize}&pagenum=${pageNum}&callback=JSONP_CALLBACK`)
+            .map((response: Response) => {
+                return response.json();
+            });
     }
 }
