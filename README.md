@@ -1,7 +1,7 @@
 # 注意
 * demo 仅用于学习。里面用了第三方 api 请不要进行商业使用，后果自负！
 
-# 电ck
+# 电台
 <img src="https://github.com/mzl1988/ng-hello/blob/master/other/1.png" width="100%">
 <img src="https://github.com/mzl1988/ng-hello/blob/master/other/2.png" width="100%">
 
