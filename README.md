@@ -62,4 +62,3 @@ angular-cli会在项目根目录下生成一个dist目录，里面就是编译�
 
 ## 图标
 1. http://fontawesome.io/icons/ 常用
-2. http://byrushan.com/projects/sa/1-0-3/content-widgets.html# ng-hello
