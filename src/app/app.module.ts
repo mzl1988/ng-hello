@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CookieModule } from 'ngx-cookie';
@@ -19,7 +20,7 @@ import { PagesModule } from '../pages/pages.module';
         CookieModule.forRoot(),
         RouterModule.forRoot(appRoutes)
     ],
-    providers: [],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

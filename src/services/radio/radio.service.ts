@@ -6,7 +6,7 @@ import { Http, Response, Jsonp } from '@angular/http';
 
 @Injectable()
 export class RadioService {
-    apiUrl = 'http://www.tingban.cn/webapi';
+    apiUrl = 'https://www.tingban.cn/webapi';
 
     constructor(
         private jsonp: Jsonp
