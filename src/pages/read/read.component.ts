@@ -133,6 +133,6 @@ export class ReadComponent implements OnInit {
     }
 
     closeReadModal() {
-        $('app-read .read-modal').animate({'margin-left': '100vw'});
+        $('app-read .read-modal').animate({'margin-left': '120vw'});
     }
 }

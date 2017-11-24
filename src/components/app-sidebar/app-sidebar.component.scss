@@ -26,14 +26,18 @@
     width: 45px;
     line-height: 45px;
     text-align: center;
-    opacity: 0.55;
+    opacity: 0.6;
     cursor: pointer;
     color: #fff;
     i {
         font-size: 1.3rem;
     }
+    &:hover {
+        opacity: 1;
+        color: #F1565E;
+    }
     span.menu-item {
-        color: rgba(255, 213, 0, 0.8);
+        color: #F1565E;
     }
 }
 

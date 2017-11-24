@@ -7,6 +7,9 @@
 * npm uninstall -g @angular/cli
 * npm cache clean
 # if npm version is > 5 then use `npm cache verify` to avoid errors (or to avoid using --force)
+# 安装完node后建议设置npm镜像以加速后面的过程（或使用科学上网工具）。注意：不要使用cnpm！cnpm安装的模块路径比较奇怪，packager不能正常识别！
+* npm config set registry https://registry.npm.taobao.org --global
+* npm config set disturl https://npm.taobao.org/dist --global
 * npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/ 
 * npm install -g @angular/cli@latest
 * rm -rf node_modules dist
@@ -16,7 +19,7 @@
 ## 开发
 * npm install
 * ng serve 或 ng serve --host 192.168.10.113 --port 4201
-
+sss
 打开你的浏览器，访问http://localhost:XXXX/ 或 http://192.168.10.xxx:xxxx
 
 如果你想让加载的包更小，请使用以下方式启动angular-cli内置的轻量级http server

@@ -23,7 +23,8 @@
             "./assets/ionicons-v3.0.0/css/ionicons.css"
         ],
         "scripts": [
-            "./assets/js/util.js"
+            "./assets/js/util.js",
+            "../node_modules/aplayer/dist/APlayer.min.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {

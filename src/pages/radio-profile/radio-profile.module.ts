@@ -5,6 +5,7 @@ import { Http, JsonpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import {
     PerfectScrollbarModule, PerfectScrollbarConfigInterface,
     PERFECT_SCROLLBAR_CONFIG
@@ -25,6 +26,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         FormsModule,
         PerfectScrollbarModule,
         TooltipModule.forRoot(),
+        ButtonsModule.forRoot(),
         PaginationModule.forRoot(),
         RouterModule.forChild(radioProfileRoutes)
     ],

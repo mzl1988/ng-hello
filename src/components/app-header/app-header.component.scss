@@ -1,5 +1,5 @@
 #header {
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     min-height: 50px;
     position: relative;
     padding-right: 7px;
@@ -15,8 +15,17 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favicon {
+    display: block;
+    width: 25px;
+    height: 25px;
 }
 
 .logo {
@@ -28,6 +37,7 @@
     margin-right: 9px !important;
     background: rgba(0, 0, 0, 0.23);
 }
+
 .a-icon {
     padding: 0 8px 0 0;
     white-space: nowrap;
@@ -41,25 +51,12 @@
     -o-transition: all 300ms;
     -ms-transition: all 300ms;
     transition: all 300ms;
-
     i {
         width: 40px;
         height: 49px;
         line-height: 49px;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         float: left;
-    }
-
-    span {
-        width: 0px;
-        float: left;
-        text-align: left;
-        overflow: hidden;
-        line-height: 49px;
-        font-size: 12px;
-    }
-    &:hover span {
-        width: 70px !important;
     }
 }
 
@@ -75,7 +72,7 @@
 }
 
 .template-skins [class*="col-"] img {
-    border: 3px solid rgba(0,0,0,0.5);
+    border: 3px solid rgba(0, 0, 0, 0.5);
 }
 
 .template-skins [class*="col-"] img:hover {
@@ -83,5 +80,5 @@
 }
 
 .template-skins [class*="col-"] {
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }

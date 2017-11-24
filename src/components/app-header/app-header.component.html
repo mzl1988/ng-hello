@@ -1,11 +1,10 @@
 <header id="header">
     <a id="menu-toggle">
-        <i class="icon ion-ios-menu-outline"></i>
+        <img src="favicon.ico">
     </a>
     <a class="logo pull-left">NG HELLO v1.0</a>
     <a class="a-icon pull-left" (click)="openModal(skin)">
-        <i class="icon ion-ios-color-fill-outline"></i>
-        <span>皮肤</span>
+        <i class="icon ion-ios-settings-outline" [tooltip]="'皮肤'" container="body" placement="right"></i>
     </a>
 
     <div id="time" class="pull-right">

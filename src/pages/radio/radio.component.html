@@ -29,8 +29,8 @@
                             <div class="card" [routerLink]="['/pages/radio-profile', item.id]">
                                 <img class="card-img-top" [src]="item.pic" alt="Card image cap">
                                 <div class="card-body">
-                                    <h4 class="card-title" [tooltip]="item.name">{{ item.name }}</h4>
-                                    <p class="card-text" [tooltip]="item.desc">{{ item.desc }}</p>
+                                    <h4 class="card-title" [tooltip]="item.name" container="body">{{ item.name }}</h4>
+                                    <p class="card-text" [tooltip]="item.desc" container="body">{{ item.desc }}</p>
                                 </div>
                             </div>
                         </div>

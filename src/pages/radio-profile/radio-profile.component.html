@@ -33,7 +33,7 @@
         <div class="listview-header">
             <div class="w-50 float-left">
                 <div class="d-flex justify-content-start align-items-center">
-                    <button type="button" class="btn btn-dark btn-sm">
+                    <button type="button" class="btn btn-alt btn-sm" (click)="toPlay()">
                         <i class="fa fa-volume-up"></i> 播放全部
                     </button>
                 </div>
@@ -49,17 +49,20 @@
                 </div>
             </div>
         </div>
+        <div id="player" class="aplayer"></div>
         <div class="listview-body">
             <perfect-scrollbar>
                 <div class="loader-box" *ngIf="loading">
                     <div class="loader"></div>
                 </div>
-                <div class="media" *ngFor="let item of dataList; let i = index">
-                    <!-- 阻止事件冒泡 $event.stopPropagation() -->
-
-                    <div class="media-body">
-                        <div>
+                <div class="media" *ngFor="let item of dataList; let i = index" (click)="setMusic(i)">
+                    <div class="media-body d-flex align-items-center">
+                        <div class="w-75 pull-left audio-name" [ngClass]="{'active': i === playIndex}">
+                            <i class="fa mr-1" [ngClass]="{'fa-volume-up': i === playIndex, 'fa-play-circle-o': i !== playIndex}"></i>
                             {{ item.audioName }}
+                        </div>
+                        <div class="w-25 pull-left update-time">
+                            {{ item.updateTime }}
                         </div>
                     </div>
                 </div>

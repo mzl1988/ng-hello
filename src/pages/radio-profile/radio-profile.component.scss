@@ -44,7 +44,6 @@
         .widget-body {
             padding: 5px 10px 10px;
             overflow: hidden;
-
             .attrs {
                 padding: 5px 8px;
                 margin: 4px 5px 2px 0;
@@ -54,7 +53,6 @@
                 color: rgba(255, 255, 255, 0.8);
                 background: rgba(0, 0, 0, 0.2);
             }
-
             .desc {
                 color: rgba(255, 255, 255, 0.8);
                 font-size: 11px;
@@ -91,6 +89,14 @@
     }
 }
 
+.has-player .listview-body {
+    height: calc(100% - 127px) !important;
+}
+
+#player {
+    display: none;
+}
+
 .listview-body {
     width: 100%;
     height: calc(100% - 51px);
@@ -105,6 +111,19 @@
         &:hover {
             background-color: rgba(0, 0, 0, 0.07);
         }
+        &:hover .audio-name {
+            color: #F1565E;
+        }
+        .audio-name {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .audio-name.active {
+            color: #F1565E;
+        }
+        .update-time {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
         .attrs {
             padding: 5px 8px;
             margin: 4px 5px 2px 0;
@@ -114,4 +133,8 @@
             background: rgba(0, 0, 0, 0.2);
         }
     }
+}
+
+.aplayer-author {
+    color: rgb(0, 0, 0);
 }

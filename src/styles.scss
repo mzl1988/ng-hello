@@ -24,6 +24,7 @@
 ----------------------------------------------------------*/
 
 @import 'assets/scss/loader';
+
 /*-----------------------------------------------------------
     bootstrap
 ----------------------------------------------------------*/
@@ -42,7 +43,7 @@ html,
 body {
     height: 100%;
     color: #fff;
-    min-width: 720px;
+    min-width: 992px;
     overflow: hidden;
     font-weight: 300!important;
 }
@@ -51,11 +52,13 @@ body {
     width: 5px;
     height: 5px;
 }
+
  ::-webkit-scrollbar-thumb {
     background: #aaa;
     cursor: pointer;
     border-radius: 2.5px;
 }
+
  ::-webkit-scrollbar-track {
     background: rgba(241, 241, 241, 0.3);
 }
@@ -66,15 +69,21 @@ body {
 
 * {
     box-shadow: none;
-    -ms-touch-action: manipulation; 
-    touch-action: manipulation;    
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
 }
 
-*:focus, *:active {
+*:focus,
+*:active {
     outline: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'open-sans-light', sans-serif;
     font-weight: normal;
 }
@@ -107,3 +116,29 @@ a.underline:focus {
         @include loader($size: 15px, $color: #000, $duration: 1s, $gap: 2px, $align: middle);
     }
 }
+
+
+/* APlayer */
+
+.aplayer .aplayer-info .aplayer-music .aplayer-author {
+    color: #fff;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-time {
+    color: #fff;
+}
+
+// .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+//     background: #F1565E !important;
+// }
+// .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+//     background: rgba(0, 0, 0, 0.5);
+// }
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon .aplayer-fill {
+    fill: #fff !important;
+}
+
+// .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar .aplayer-volume {
+//     background: #F1565E !important;
+// }
