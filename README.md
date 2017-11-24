@@ -1,6 +1,14 @@
 # 注意
 * demo 仅用于学习。里面用了第三方 api 请不要进行商业使用，后果自负！
 
+# 电ck
+<img src="https://github.com/mzl1988/ng-hello/blob/master/other/1.png" width="100%">
+<img src="https://github.com/mzl1988/ng-hello/blob/master/other/2.png" width="100%">
+
+# 阅读
+<img src="https://github.com/mzl1988/ng-hello/blob/master/other/3.png" width="100%">
+<img src="https://github.com/mzl1988/ng-hello/blob/master/other/4.png" width="100%">
+
 # NgHELLO
 
 ## 升级

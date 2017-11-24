@@ -86,19 +86,20 @@
             background-color: rgba(0, 0, 0, 0.07);
         }
         &:hover h5 {
-            color: #FFD600;
+            color: #F1565E;
         }
         img {
             width: 100px;
             height: 65px;
         }
         h5 {
-            font: 1.1rem;
+            font-size: 1.2rem;
             white-space: normal;
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
             overflow: hidden;
+            color: rgba(255, 255, 255, 0.8);
         }
         .attrs {
             padding: 5px 8px;
