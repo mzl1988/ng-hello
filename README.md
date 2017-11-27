@@ -1,5 +1,8 @@
 # 注意
 * demo 仅用于学习。里面用了第三方 api 请不要进行商业使用，后果自负！
+* 访问地址 https://mzl1988.github.io/ng-hello ;如果不能访问请选用浏览器打开 https://www.tingban.cn/webapi/category/list 信任一下 ，再刷新一下页面。如下图：
+<img src="https://github.com/mzl1988/ng-hello/blob/master/other/5.png" width="100%">
+
 
 # 电台
 <img src="https://github.com/mzl1988/ng-hello/blob/master/other/1.png" width="100%">
