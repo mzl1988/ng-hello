@@ -27,7 +27,6 @@
 ## 开发
 * npm install
 * ng serve 或 ng serve --host 192.168.10.113 --port 4201
-sss
 打开你的浏览器，访问http://localhost:XXXX/ 或 http://192.168.10.xxx:xxxx
 
 如果你想让加载的包更小，请使用以下方式启动angular-cli内置的轻量级http server
