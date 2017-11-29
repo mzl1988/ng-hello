@@ -142,3 +142,8 @@ a.underline:focus {
 // .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar .aplayer-volume {
 //     background: #F1565E !important;
 // }
+
+/* perfect-scrollbar */
+perfect-scrollbar>.ps.ps--active-y>.ps__rail-y {
+    background: transparent !important;
+}
